@@ -1,0 +1,119 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Engineering Faculty </title>
+  <style type="text/css">
+    table  td#col2{
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+  <h1><b>Buy T-shirts Online</b></h1>
+  <h1><b>Fill out the form below and click "Order Now" to order</b></h1>
+  <form action="<?php $_PHP_SELF ?>" method="GET">
+    <table>
+      <tr>
+        <th> Search by order number: </th>
+        <td> <input type="text" name="ordernumber"><input type="submit" value="Search"></td>
+      <tr>
+        <th> Choose your size : </th>
+        <td id="col2"><input type="radio" name="size" value="small">Small<input type="radio" name="size" value="medium">Medium<input type="radio" name="size" value="large">Large</td>
+      <tr>
+        <th> Choose your colour: </th>
+        <td id="col2">        <select id="colours" name="colours">
+          <option value="red">Red</option>
+          <option value="purple">Purple</option>
+          <option value="blue">Blue</option>
+          <option value="green">Green</option>
+          </select> </td>
+       <tr>
+         <th> Extra Items: </th>
+         <td id="col2">
+           <table>
+             <tr>
+              <td><input type="checkbox" name="Item[]" value="cap">Cap<br></td>
+             </tr>
+             <tr>
+               <td><input type="checkbox" name="Item[]" value="wristband">Wrist Band<br></td>
+           </table>
+         </td>
+       <tr>
+         <th> Deliver To: </th>
+         <td>
+           <table>
+             <tr>
+               <th>First Name:</th>
+               <td><input type="text" name="fName"></td>
+             <tr>
+               <th>Last Name:</th>
+               <td><input type="text" name="lName"></td>
+             <tr>
+               <th>Address1:</th>
+               <td><input type="text" name="Address1"></td>
+             <tr>
+               <th>Address2:</th>
+               <td><input type="text" name="Address2"></td>
+             <tr>
+               <th>Address3:</th>
+               <td><input type="text" name="Address3"></td>
+
+           </table>
+         </td>
+       <tr>
+         <th>Your Comments:</th>
+         <td>
+           <form name="form1" action="html_ action.php" method="get">
+           <textarea rows = "5" cols = "50" name = "description"> </textarea>
+           <br>
+           <input type="submit" value="Order Now">
+
+         </td>
+
+
+    </table>
+
+   </form>
+   <h1>
+     Your Information System
+ </h1>
+
+ <?php
+
+ $fName = $_GET["fName"];
+ $lName = $_GET["lName"];
+ $Address1 = $_GET["Address1"];
+ $Address2 = $_GET["Address2"];
+ $Address3 = $_GET["Address3"];
+ $description = $_GET["description"];
+
+ $colour = $_GET["colours"];
+ $size = $_GET["size"];
+ $extra = $_GET["Item"];
+
+ echo "Thank you $fName for your perches from our web site <br><br>";
+ echo "Your item colour is : $colours & T-Shirt size is : $size <br><br>";
+ echo "Your selected items are : <br><br>";
+
+ foreach ($extra as $Item) {
+     echo "*Item .<br />";
+ }
+
+ echo "<br>Your itens will be sent to :<br><br>";
+ echo "<i>$fName $lName,</i><br>";
+ echo "<i>$Address1,</i><br>";
+ echo "<i>$Address2,<br></i>";
+ echo "<i>$Address3,</i><br><br>";
+
+ echo "Thank you for submitting your comments. We appriciate it. You said <br><br>";
+ echo "<i>$description</i>";
+
+
+ ?>
+</body>
+
+</html>

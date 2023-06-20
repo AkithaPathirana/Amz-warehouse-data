@@ -1,0 +1,26 @@
+CREATE DATABASE E18375Lab03;
+USE E18375Lab03;
+CREATE TABLE CustomerOrders
+    -> (userID CHAR(10) PRIMARY KEY,
+    -> FirstName VARCHAR(20),
+    -> LastName VARCHAR(20),
+    -> OrderNumber INT,
+    -> OrderSize VARCHAR(10),
+    -> OrderColour VARCHAR(10),
+    -> ExtraItems VARCHAR(13),
+    -> AddressLine1 VARCHAR(50),
+    -> AddressLine2 VARCHAR(50),
+    -> AddressLine3 VARCHAR(50),
+    -> UserComments VARCHAR(400));
+
+INSERT INTO CustomerOrders
+    -> VALUES ('981942547v','AKITHA','PATHIRANA',20,'Medium','Red','Cap','No71','yatiyana road','matara','Deliver fast');
+
+UPDATE CustomerOrders
+    -> SET ExtraItems='None' WHERE FirstName= 'AKITHA';
+
+INSERT INTO CustomerOrders
+    -> VALUES ('981945547v','NIMAL','KUMARA',24,'Medium','Blue','Cap','No74','galle road','galle','Deliver on time');
+
+DELETE FROM CustomerOrders
+    -> WHERE LastName='PATHIRANA';

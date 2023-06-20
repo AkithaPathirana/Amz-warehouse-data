@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Engineering Faculty </title>
+  <style type="text/css">
+    table  td#col2{
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+  <h1><b>Buy T-shirts Online</b></h1>
+  <h1><b>Fill out the form below and click "Order Now" to order</b></h1>
+  <form>
+    <table>
+      <tr>
+        <th> Search by order number: </th>
+        <td> <input type="text" name="ordernumber"><input type="submit" value="Search"></td>
+      <tr>
+        <th> Choose your size : </th>
+        <td id="col2"><input type="radio" name="sizeSmall" value="small">Small<input type="radio" name="sizeMedium" value="medium">Medium<input type="radio" name="sizeLarge" value="large">Large</td>
+      <tr>
+        <th> Choose your colour: </th>
+        <td id="col2">        <select id="colours" name="colours">
+          <option value="red">Red</option>
+          <option value="purple">Purple</option>
+          <option value="blue">Blue</option>
+          <option value="green">Green</option>
+          </select> </td>
+       <tr>
+         <th> Extra Items: </th>
+         <td id="col2">
+           <table>
+             <tr>
+              <td><input type="checkbox" name="ItemA" value="cap">Cap<br></td>
+             </tr>
+             <tr>
+               <td><input type="checkbox" name="ItemB" value="wristband">Wrist Band<br></td>
+           </table>
+         </td>
+       <tr>
+         <th> Deliver To: </th>
+         <td>
+           <table>
+             <tr>
+               <th>First Name:</th>
+               <td><input type="text" name="fName"></td>
+             <tr>
+               <th>Last Name:</th>
+               <td><input type="text" name="lName"></td>
+             <tr>
+               <th>Address1:</th>
+               <td><input type="text" name="Address1"></td>
+             <tr>
+               <th>Address2:</th>
+               <td><input type="text" name="Address2"></td>
+             <tr>
+               <th>Address3:</th>
+               <td><input type="text" name="Address3"></td>
+
+           </table>
+         </td>
+       <tr>
+         <th>Your Comments:</th>
+         <td>
+           <form name="form1" action="html_ action.php" method="get">
+           <textarea rows = "5" cols = "50" name = "description"> </textarea>
+           <br>
+           <input type="submit" value="Order Now">
+
+         </td>
+
+
+    </table>
+
+   </form>
+
+</body>
+
+</html>
